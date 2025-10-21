@@ -1,0 +1,129 @@
+.pricing-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f8fafc;
+}
+
+.pricing-header h2 {
+    font-size: 2.2rem;
+    color: #0f172a;
+}
+
+.pricing-header p {
+    margin-top: 10px;
+    color: #475569;
+    font-size: 1rem;
+}
+
+/* 3 Card Grid Layout */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+.pricing-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.pricing-card.popular {
+    border: 2px solid #3b82f6;
+    transform: scale(1.02);
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    color: #0f172a;
+}
+
+.pricing-card .price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 15px 0;
+    color: #a855f7;
+}
+
+.pricing-btn {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.pricing-btn:hover {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+}
+.features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f9fafb;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.features li:hover {
+    background: #eef2ff;
+    transform: translateX(3px);
+}
+
+.features li span {
+    color: #475569;
+}
+
+.features li.unavailable span {
+    color: #9ca3af;
+}
+
+
+.badge {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: white;
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.guarantee {
+    margin-top: 30px;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+/* ✨ Responsive Design */
+@media (max-width: 768px) {
+    .pricing-card {
+        padding: 30px 20px;
+    }
+
+    .pricing-header h2 {
+        font-size: 1.8rem;
+    }
+}

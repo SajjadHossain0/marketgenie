@@ -1,0 +1,231 @@
+/* Container */
+.up-user-panel {
+    display: flex;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+}
+
+/* Sidebar */
+.up-sidebar {
+    background: #111827;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    transition: all 0.3s ease;
+}
+
+.up-sidebar.expanded {
+    width: 220px;
+}
+
+.up-sidebar.collapsed {
+    width: 60px;
+    padding: 30px 10px;
+    overflow: hidden;
+}
+
+.up-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #4f46e5, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.up-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.up-menu li {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.up-menu li:hover {
+    background: rgba(79, 70, 229, 0.2);
+}
+
+.up-menu li.active {
+    background: #4f46e5;
+    font-weight: 600;
+}
+
+.menu-icon {
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.up-sidebar.collapsed .menu-text {
+    display: none;
+}
+
+/* Main wrapper */
+.up-main-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+/* Navbar */
+.up-navbar {
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.up-nav-left .hamburger {
+    cursor: pointer;
+}
+
+.up-nav-right svg {
+    cursor: pointer;
+}
+
+/* Main Content */
+.up-main-content {
+    flex: 1;
+    background: #f9fafc;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.up-main-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.up-main-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #4b5563;
+}
+
+.up-dummy-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .up-sidebar {
+        position: absolute;
+        height: 100%;
+        z-index: 20;
+    }
+
+    .up-main-wrapper {
+        flex: 1;
+    }
+}
+
+
+/* Modal overlay */
+.up-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+/* Modal box */
+.up-modal {
+    background: #fff;
+    border-radius: 12px;
+    width: 500px;
+    max-width: 90%;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Modal header */
+.up-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.up-modal-header h2 {
+    margin: 0;
+}
+
+.close-icon {
+    cursor: pointer;
+}
+
+.up-modal {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 90%;          /* small screens এর জন্য 90% */
+    max-width: 800px;    /* বড় screens-এ 600px */
+    max-height: 80vh;    /* vertical height-এ 80% */
+    overflow-y: auto;    /* content overflow হলে scroll হবে */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Modal body */
+.up-modal-body p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #111827;
+}
+
+.logout-btn {
+    margin-top: 20px;
+    background: #d12929;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #ef2f2f;
+}
+
+/* Close button */
+.close-icon {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #111827;
+    font-weight: bold;
+}
